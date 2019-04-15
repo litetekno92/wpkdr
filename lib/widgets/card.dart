@@ -20,17 +20,21 @@ class _PostCardState extends State<PostCard> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Card(
-          child: Column(
-            children: <Widget>[
-              new Text(post.title.rendered ?? ' '),
-              // new Text(post.embedded.wpFeaturedmedia[0].sourceUrl ?? ' '),
-                  ],
-                ),
-              ),
-            ],
-          );
+    return 
+    Card(
+              child: 
+              
+              ListTile(
+
+                  contentPadding: EdgeInsets.all(10.0),
+                  title: new Text(post.title.rendered),
+                  // subtitle: new Text(post.excerpt.rendered),
+                  subtitle: new Text(post.toJson()["_embedded"]["wp:featuredmedia"][0]["source_url"]),
+              
+                  ),
+               
+              );
+            
+             
   }
 }
