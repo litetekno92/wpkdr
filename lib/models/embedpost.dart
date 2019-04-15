@@ -6,6 +6,7 @@ class Post {
   Content excerpt;
   int author;
   int featuredMedia;
+  dynamic featuredMediaUrl;
   // Embedded embedded;
 
   // Post._({this.title, this.thumbnailUrl});
@@ -15,6 +16,8 @@ class Post {
     this.excerpt,
     this.author,
     this.featuredMedia,
+    this.featuredMediaUrl,
+    
     // this.embedded,
   });
 
@@ -26,6 +29,7 @@ class Post {
       excerpt: Content.fromJson(json["excerpt"]),
       author: json["author"],
       featuredMedia: json["featured_media"],
+      featuredMediaUrl: json["_embedded"]["wp:featuredmedia"] == null ? 'images/placeholder.png':json["_embedded"]["wp:featuredmedia"][0]["source_url"] ,
     //  embedded: Embedded.fromJson(json["_embedded"]),
     );
     // thumbnailUrl: json['thumbnailUrl'],
@@ -38,6 +42,7 @@ class Post {
         "excerpt": excerpt.toJson(),
         "author": author,
         "featured_media": featuredMedia,
+        "featuredMediaUrl": featuredMediaUrl,
         
     };
 }
