@@ -1,16 +1,18 @@
 class Post {
   // final String title;
   // final String thumbnailUrl;
+  DateTime date;
   Guid title;
   Content content;
   Content excerpt;
-  int author;
+  String author;
   int featuredMedia;
   dynamic featuredMediaUrl;
   // Embedded embedded;
 
   // Post._({this.title, this.thumbnailUrl});
   Post._({
+    this.date,
     this.title,
     this.content,
     this.excerpt,
@@ -24,10 +26,13 @@ class Post {
   factory Post.fromJson(Map<String, dynamic> json) {
     return new Post._(
       // title: json['title']['rendered']
+      date: json["date"] != null
+        ? DateTime.parse(json["date"])
+        : null,
       title: Guid.fromJson(json["title"]),
       content: Content.fromJson(json["content"]),
       excerpt: Content.fromJson(json["excerpt"]),
-      author: json["author"],
+      author: json["_embedded"]["author"][0]["name"],
       featuredMedia: json["featured_media"],
       featuredMediaUrl: json["_embedded"]["wp:featuredmedia"] == null ? 'images/placeholder.png':json["_embedded"]["wp:featuredmedia"][0]["source_url"] ,
     //  embedded: Embedded.fromJson(json["_embedded"]),
@@ -36,7 +41,7 @@ class Post {
   }
 
    Map<String, dynamic> toJson() => {
-        
+        "date": date?.toIso8601String(),
         "title": title.toJson(),
         "content": content.toJson(),
         "excerpt": excerpt.toJson(),
