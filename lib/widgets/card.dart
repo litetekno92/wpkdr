@@ -48,7 +48,11 @@ class _PostCardState extends State<PostCard> {
             decoration: new BoxDecoration(
                 border: new Border(
                     right: new BorderSide(width: 1.0, color: Colors.white24))),
-            child: Icon(Icons.autorenew, color: Colors.white),
+            child: IconButton(
+            // icon: Icon(Icons.volume_up),
+            tooltip: DateFormat('MM-dd – kk:mm').format(post.date).toString(),
+            )
+            // Icon(Icons.autorenew, color: Colors.white),
           ),
           title: Text(
             post.title.rendered,
@@ -62,7 +66,7 @@ class _PostCardState extends State<PostCard> {
                   flex: 1,
                   child: Container(
                     // tag: 'hero',
-                    child: Text(DateFormat('MM-dd – kk:mm').format(post.date).toString(),style: TextStyle(color: Colors.white)),
+                    child: Text(post.excerpt.rendered,style: TextStyle(color: Colors.white)),
                   )
                   ),
               Expanded(
