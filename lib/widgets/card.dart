@@ -60,12 +60,9 @@ class _PostCardState extends State<PostCard> {
                   flex: 1,
                   child: Container(
                     // tag: 'hero',
-                    child: LinearProgressIndicator(
-                        backgroundColor: Color.fromRGBO(209, 224, 224, 0.2),
-                        value: 2.0,
-                        // value: post.indicatorValue,
-                        valueColor: AlwaysStoppedAnimation(Colors.green)),
-                  )),
+                    child: Text(post.date.toIso8601String(),style: TextStyle(color: Colors.white)),
+                  )
+                  ),
               Expanded(
                 flex: 4,
                 child: Padding(
