@@ -43,6 +43,7 @@ class _PostCardState extends State<PostCard> {
     Column(
        mainAxisSize: MainAxisSize.min,
     children: [
+        post.featuredMedia == 0 ? new Container(width: 0, height: 0) :
         FadeInImage.assetNetwork(
           placeholder: 'images/placeholder.png',
           image: post.featuredMediaUrl ?? 'https://picsum.photos/250?image=9',

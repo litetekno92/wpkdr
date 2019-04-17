@@ -51,6 +51,7 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   assets:
+   - json/categories.json
    - images/placeholder.png
    - drive-steering-wheel.jpg
    - line.png
