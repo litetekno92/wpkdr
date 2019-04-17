@@ -38,7 +38,7 @@ class _PostCardState extends State<PostCard> {
   }
 
   Container makeListTile(Post post) => Container(
-    color: const Color(0xFF00FF00),
+    padding: EdgeInsets.all(8.0),
     child :
     Column(
        mainAxisSize: MainAxisSize.min,
