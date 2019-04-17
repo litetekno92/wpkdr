@@ -49,7 +49,7 @@ class _PostCardState extends State<PostCard> {
                 border: new Border(
                     right: new BorderSide(width: 1.0, color: Colors.white24))),
             child: IconButton(
-            // icon: Icon(Icons.volume_up),
+            icon: Icon(Icons.volume_up),
             tooltip: DateFormat('MM-dd – kk:mm').format(post.date).toString(),
             )
             // Icon(Icons.autorenew, color: Colors.white),
