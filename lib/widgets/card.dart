@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:wpkdr/models/embedpost.dart';
 import 'package:wpkdr/widgets/single.dart';
 import 'package:flutter_html_view/flutter_html_view.dart';
+import 'package:intl/intl.dart';
+
 
 class PostCard extends StatefulWidget {
   final Post post;
@@ -60,7 +62,7 @@ class _PostCardState extends State<PostCard> {
                   flex: 1,
                   child: Container(
                     // tag: 'hero',
-                    child: Text(post.date.toIso8601String(),style: TextStyle(color: Colors.white)),
+                    child: Text(DateFormat('MM-dd – kk:mm').format(post.date).toString(),style: TextStyle(color: Colors.white)),
                   )
                   ),
               Expanded(
