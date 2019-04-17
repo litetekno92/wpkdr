@@ -14,19 +14,22 @@ class SinglePost extends StatelessWidget {
         title: new Text(post.title.rendered),
       ),
       body: new Padding(
-        padding: EdgeInsets.all(16.0),
-        child: new ListView(
+        padding: EdgeInsets.all(12.0),
+        child: Container(
+        decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+          child: new ListView(
           children: <Widget>[
-            // new FadeInImage.memoryNetwork(
-            //   placeholder: kTransparentImage,
-            //   image: post.featuredMedia == 0
-            //       ? 'images/placeholder.png'
-            //       : post.embedded.wpFeaturedmedia[0].sourceUrl,
-            // ),
-            new Text(post.content.rendered.replaceAll(new RegExp(r'<[^>]*>'), ''))
+            new FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage,
+              image: post.featuredMedia == 0
+                  ? 'images/placeholder.png'
+                  : post.featuredMediaUrl,
+            ),
+            new Text(post.content.rendered.replaceAll(new RegExp(r'<[^>]*>'), ''),style: TextStyle(color: Colors.white))
           ],
         ),
       ),
+    )
     );
   }
 }
