@@ -65,7 +65,7 @@ class _PostCardState extends State<PostCard> {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           // subtitle: Text("Intermediate", style: TextStyle(color: Colors.white)),
-          subtitle: Text(post.excerpt.rendered,
+          subtitle: Text(post.excerpt.rendered.replaceAll(new RegExp(r'<[^>]*>'), ''),
               style: TextStyle(color: Colors.white)),
         ),
         ListTile(
