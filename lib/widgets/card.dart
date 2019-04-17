@@ -70,7 +70,7 @@ class _PostCardState extends State<PostCard> {
                   )
                   ),
               Expanded(
-                flex: 4,
+                flex: 1,
                 child: Padding(
                     padding: EdgeInsets.only(left: 10.0),
                     child: Text(post.author,
