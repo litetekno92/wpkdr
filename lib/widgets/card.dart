@@ -37,7 +37,11 @@ class _PostCardState extends State<PostCard> {
     //           );
   }
 
-  ListView makeListTile(Post post) => ListView(children: [
+  Container makeListTile(Post post) => Container(
+    color: const Color(0xFF00FF00),
+    child :
+    ListView(
+    children: [
         FadeInImage.assetNetwork(
           placeholder: 'images/placeholder.png',
           image: post.featuredMediaUrl ?? 'https://picsum.photos/250?image=9',
@@ -76,7 +80,8 @@ class _PostCardState extends State<PostCard> {
                     builder: (context) => SinglePost(post: post)));
           },
         )
-      ]);
+      ])
+  );
 
   Card makeCard(Post post) => Card(
         elevation: 8.0,
