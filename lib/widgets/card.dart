@@ -40,7 +40,8 @@ class _PostCardState extends State<PostCard> {
   Container makeListTile(Post post) => Container(
     color: const Color(0xFF00FF00),
     child :
-    ListView(
+    Column(
+       mainAxisSize: MainAxisSize.min,
     children: [
         FadeInImage.assetNetwork(
           placeholder: 'images/placeholder.png',
