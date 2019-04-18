@@ -4,9 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        drawer: Drawer(
-            child: ListView(children: [
+    return  ListView(children: [
       DrawerHeader(
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -33,7 +31,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(fontSize: 12.0, color: Colors.white)),
           ],
         )),
-      ),
+    ),
 
       // CustomListTile(Icons.home, 'Home', () => {}),
       // CustomListTile(Icons.person, 'Profile', () => {}),
@@ -49,7 +47,8 @@ class CustomDrawer extends StatelessWidget {
           icon: categories[3].icon, text: categories[3].title, onTap: () => {}),
       CustomListTile(
           icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
-    ])));
+    ]
+    );
   }
 }
 
