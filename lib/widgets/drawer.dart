@@ -4,7 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  ListView(children: [
+    return  Drawer(
+      child: ListView(children: [
       DrawerHeader(
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -48,7 +49,7 @@ class CustomDrawer extends StatelessWidget {
       CustomListTile(
           icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
     ]
-    );
+    ));
   }
 }
 
