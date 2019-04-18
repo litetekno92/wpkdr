@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:wpkdr/models/embedpost.dart';
 import 'package:wpkdr/utils/API.dart';
 import 'package:wpkdr/widgets/card.dart';
+import 'package:wpkdr/widgets/drawer.dart';
 
 class FetchData extends StatefulWidget {
   @override
@@ -44,6 +45,7 @@ class _FetchDataState extends State<FetchData> {
         appBar: AppBar(
           title: Text("Wordpress api"),
         ),
+        drawer: CustomDrawer(),
         body: ListView.builder(
           itemCount: posts.length,
           itemBuilder: (context, index) {
