@@ -1,54 +1,56 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-        return Scaffold(
-      body: ListView(children: [
-        DrawerHeader(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment(
-                0.8, 0.0), // 10% of the width, so there are ten blinds.
-            colors: [
-              const Color(0xFFFFFFEE),
-              const Color(0xFF999999)
-            ], // whitish to gray
-            tileMode: TileMode.repeated, // repeats the gradient over the canvas
-          )),
-          child: Container(
-              child: Column(
-            children: <Widget>[
-              Material(
-                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
-                  elevation: 10,
-                  child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Image.asset('images/mediasen-logo.png',
-                          width: 92, height: 92))),
-              Text('Flutter',
-                  style: TextStyle(fontSize: 12.0, color: Colors.white)),
-            ],
-          )),
-        ),
+    return Scaffold(
+        drawer: Drawer(
+            child: ListView(children: [
+      DrawerHeader(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end:
+              Alignment(0.8, 0.0), // 10% of the width, so there are ten blinds.
+          colors: [
+            const Color(0xFFFFFFEE),
+            const Color(0xFF999999)
+          ], // whitish to gray
+          tileMode: TileMode.repeated, // repeats the gradient over the canvas
+        )),
+        child: Container(
+            child: Column(
+          children: <Widget>[
+            Material(
+                borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                elevation: 10,
+                child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Image.asset('images/mediasen-logo.png',
+                        width: 92, height: 92))),
+            Text('Flutter',
+                style: TextStyle(fontSize: 12.0, color: Colors.white)),
+          ],
+        )),
+      ),
 
-        // CustomListTile(Icons.home, 'Home', () => {}),
-        // CustomListTile(Icons.person, 'Profile', () => {}),
-        // CustomListTile(Icons.settings, 'Settings', () => {}),
+      // CustomListTile(Icons.home, 'Home', () => {}),
+      // CustomListTile(Icons.person, 'Profile', () => {}),
+      // CustomListTile(Icons.settings, 'Settings', () => {}),
 
-        CustomListTile(icon: categories[0].icon, text: categories[0].title, onTap: () => {}),
-        CustomListTile(icon: categories[1].icon, text: categories[1].title, onTap: () => {}),
-        CustomListTile(icon: categories[2].icon, text: categories[2].title, onTap: () => {}),
-        CustomListTile(icon: categories[3].icon, text: categories[3].title, onTap: () => {}),
-        CustomListTile(icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
-      ])
-     
-    );
+      CustomListTile(
+          icon: categories[0].icon, text: categories[0].title, onTap: () => {}),
+      CustomListTile(
+          icon: categories[1].icon, text: categories[1].title, onTap: () => {}),
+      CustomListTile(
+          icon: categories[2].icon, text: categories[2].title, onTap: () => {}),
+      CustomListTile(
+          icon: categories[3].icon, text: categories[3].title, onTap: () => {}),
+      CustomListTile(
+          icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
+    ])));
   }
-
 }
 
 class CustomListTile extends StatelessWidget {
@@ -119,17 +121,15 @@ List<Category> categories = [
     icon: FontAwesomeIcons.home,
   ),
   Category(
-    id: 2,
-    title: "ECONOMIE",
-    color: Colors.red,
-    icon: FontAwesomeIcons.landmark  
-    ),
+      id: 2,
+      title: "ECONOMIE",
+      color: Colors.red,
+      icon: FontAwesomeIcons.landmark),
   Category(
-    id: 3,
-    title: "SCIENCE & HIGH-TECH",
-    color: Colors.red,
-    icon: FontAwesomeIcons.atom
-  ),
+      id: 3,
+      title: "SCIENCE & HIGH-TECH",
+      color: Colors.red,
+      icon: FontAwesomeIcons.atom),
   Category(
     id: 4,
     title: "SPORTS",
@@ -140,7 +140,5 @@ List<Category> categories = [
       id: 5,
       title: "ARTS & CULTURE",
       color: Colors.red,
-      icon: FontAwesomeIcons.artstation
-      )
+      icon: FontAwesomeIcons.artstation)
 ];
-
