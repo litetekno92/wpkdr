@@ -5,12 +5,13 @@ class DrawerItem {
 }
 
 class HomePage extends StatefulWidget {
-  final drawerItems = [
-    new DrawerItem("Fragment 1", Icons.rss_feed),
-    new DrawerItem("Fragment 2", Icons.local_pizza),
-    new DrawerItem("Fragment 3", Icons.info)
-  ];
-  final drawerItems = categories.map(category)=>DrawerItem(category.title,category.icon));
+ // final drawerItems = [
+ //   new DrawerItem("Fragment 1", Icons.rss_feed),
+ //  new DrawerItem("Fragment 2", Icons.local_pizza),
+ //  new DrawerItem("Fragment 3", Icons.info)
+ // ];
+ // final drawerItems = categories.map(category) => DrawerItem(category.title,category.icon).toList()));
+  final drawerItems = categories.map((fruit) => DrawerItem(category.title,category.icon)).toList();
 
   @override
   State<StatefulWidget> createState() {
