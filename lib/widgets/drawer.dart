@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:wpkdr/fetchdata.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -39,7 +40,7 @@ class CustomDrawer extends StatelessWidget {
       // CustomListTile(Icons.settings, 'Settings', () => {}),
 
       CustomListTile(
-          icon: categories[0].icon, text: categories[0].title, onTap: () => {}),
+          icon: categories[0].icon, text: categories[0].title, onTap: () => FetchData()),
       CustomListTile(
           icon: categories[1].icon, text: categories[1].title, onTap: () => {}),
       CustomListTile(
