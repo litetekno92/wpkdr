@@ -46,7 +46,11 @@ class _FetchDataState extends State<FetchData> {
           title: Text("Wordpress api"),
         ),
         drawer: CustomDrawer(),
-        body: ListView.builder(
+        body: isLoading
+        ?Center(
+            child: new CircularProgressIndicator(),
+          )
+        :ListView.builder(
           itemCount: posts.length,
           itemBuilder: (context, index) {
             // var photo= posts[index];
