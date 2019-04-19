@@ -5,8 +5,8 @@ import 'package:wpkdr/fetchdata.dart';
 class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Drawer(
-      child: ListView(children: [
+    return Drawer(
+        child: ListView(children: [
       DrawerHeader(
         decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -33,14 +33,20 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(fontSize: 16.0, color: Colors.white)),
           ],
         )),
-    ),
+      ),
 
       // CustomListTile(Icons.home, 'Home', () => {}),
       // CustomListTile(Icons.person, 'Profile', () => {}),
       // CustomListTile(Icons.settings, 'Settings', () => {}),
 
       CustomListTile(
-          icon: categories[0].icon, text: categories[0].title, onTap: () => FetchData()),
+          icon: categories[0].icon,
+          text: categories[0].title,
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (BuildContext context) => FetchData()));
+          }),
       CustomListTile(
           icon: categories[1].icon, text: categories[1].title, onTap: () => {}),
       CustomListTile(
@@ -49,8 +55,7 @@ class CustomDrawer extends StatelessWidget {
           icon: categories[3].icon, text: categories[3].title, onTap: () => {}),
       CustomListTile(
           icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
-    ]
-    ));
+    ]));
   }
 }
 
@@ -123,23 +128,34 @@ List<Category> categories = [
   ),
   Category(
       id: 2,
-      title: "ECONOMIE",
+      title: "ÉCONOMIE",
       color: Colors.red,
       icon: FontAwesomeIcons.landmark),
   Category(
-      id: 3,
+      id: 184,
       title: "SCIENCE & HIGH-TECH",
       color: Colors.red,
       icon: FontAwesomeIcons.atom),
   Category(
-    id: 4,
+    id: 6,
     title: "SPORTS",
     color: Colors.red,
     icon: FontAwesomeIcons.running,
   ),
   Category(
-      id: 5,
+    id: 193,
+    title: "VIDÉO ET PODCASTS`",
+    color: Colors.red,
+    icon: FontAwesomeIcons.running,
+  ),
+  Category(
+      id: 9,
       title: "ARTS & CULTURE",
+      color: Colors.red,
+      icon: FontAwesomeIcons.artstation),
+  Category(
+      id: 147,
+      title: "DÉBATS & OPINIONS",
       color: Colors.red,
       icon: FontAwesomeIcons.artstation)
 ];
