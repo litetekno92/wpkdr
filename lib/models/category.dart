@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+
 class Category {
   final int id;
   final String title;
   final ColorSwatch color;
-  final Icon icon;
+  final IconData icon;
 
   /// Creates a [Category].
   ///
@@ -27,29 +28,38 @@ List<Category> categories = [
     id: 1,
     title: "ACCUEIL",
     color: Colors.red,
-    icon: Icon(FontAwesomeIcons.home),
+    icon: FontAwesomeIcons.home,
   ),
   Category(
-    id: 1,
-    title: "ECONOMIE",
-    color: Colors.red,
-    icon: Icon(FontAwesomeIcons.landmark),
-  ),
+      id: 2,
+      title: "ÉCONOMIE",
+      color: Colors.red,
+      icon: FontAwesomeIcons.landmark),
   Category(
-    id: 1,
-    title: "SCIENCE & HIGH-TECH",
-    color: Colors.red,
-    icon: Icon(FontAwesomeIcons.atom),
-  ),
+      id: 184,
+      title: "SCIENCE & HIGH-TECH",
+      color: Colors.red,
+      icon: FontAwesomeIcons.atom),
   Category(
-    id: 1,
+    id: 6,
     title: "SPORTS",
     color: Colors.red,
-    icon: Icon(FontAwesomeIcons.running),
+    icon: FontAwesomeIcons.running,
   ),
   Category(
-      id: 1,
+    id: 193,
+    title: "VIDÉO ET PODCASTS`",
+    color: Colors.red,
+    icon: FontAwesomeIcons.film,
+  ),
+  Category(
+      id: 9,
       title: "ARTS & CULTURE",
       color: Colors.red,
-      icon: Icon(FontAwesomeIcons.artstation))
+      icon: FontAwesomeIcons.artstation),
+  Category(
+      id: 147,
+      title: "DÉBATS & OPINIONS",
+      color: Colors.red,
+      icon: FontAwesomeIcons.gavel)
 ];

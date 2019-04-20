@@ -10,7 +10,7 @@ class FetchDataCat extends StatefulWidget {
   final int category;
   FetchDataCat(this.category);
   @override
-  _FetchDataCatState createState() => _FetchDataCatState(category:this.category);
+  _FetchDataCatState createState() => _FetchDataCatState(this.category);
 }
 
 class _FetchDataCatState extends State<FetchDataCat> {
