@@ -60,11 +60,13 @@ class CustomDrawer extends StatelessWidget {
       //           builder: (BuildContext context) => FetchDataCat(category:6)));
       //     }),
       CustomListTile(
+          icon: categories[4].icon, text: categories[4].title, onTap: () => {}),
+      CustomListTile(
           icon: categories[5].icon, text: categories[5].title, onTap: () => {}),
       CustomListTile(
           icon: categories[6].icon, text: categories[6].title, onTap: () => {}),
-      CustomListTile(Icons.person, 'Profile', () => {}),
-      CustomListTile(Icons.settings, 'Paramètres', () => {}),
+      CustomListTile(icon: Icons.person, text: 'Profile',  onTap: () => {}),
+      CustomListTile(icon: Icons.settings, text: 'Paramètres', onTap: () => {}),
     ]));
   }
 }
