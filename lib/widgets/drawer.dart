@@ -57,7 +57,7 @@ class CustomDrawer extends StatelessWidget {
           icon: categories[4].icon, text: categories[4].title, onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => FetchDataCat(6)));
+                builder: (BuildContext context) => FetchDataCat(category:6)));
           }),
       CustomListTile(
           icon: categories[5].icon, text: categories[5].title, onTap: () => {}),
