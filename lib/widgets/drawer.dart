@@ -65,6 +65,7 @@ class CustomDrawer extends StatelessWidget {
           icon: categories[5].icon, text: categories[5].title, onTap: () => {}),
       CustomListTile(
           icon: categories[6].icon, text: categories[6].title, onTap: () => {}),
+      //Divider(color: Colors.white24),
       CustomListTile(icon: Icons.person, text: 'Profile',  onTap: () => {}),
       CustomListTile(icon: Icons.settings, text: 'Paramètres', onTap: () => {}),
     ]));
@@ -158,7 +159,7 @@ List<Category> categories = [
     id: 193,
     title: "VIDÉO ET PODCASTS`",
     color: Colors.red,
-    icon: FontAwesomeIcons.running,
+    icon: FontAwesomeIcons.film,
   ),
   Category(
       id: 9,
@@ -169,5 +170,5 @@ List<Category> categories = [
       id: 147,
       title: "DÉBATS & OPINIONS",
       color: Colors.red,
-      icon: FontAwesomeIcons.artstation)
+      icon: FontAwesomeIcons.gavel)
 ];
